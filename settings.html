@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Account Settings</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="bootstrap.css">
+	<script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js?br34k-01"></script>
+	<script src="/scripts/library/md5.js?br34k-01"></script>
+	<script src="/scripts/library/urlutility.js?br34k-01"></script>
+</head>
+<body>
+	<div class="extensions" style="display: block;">
+		<div class="container">
+			<div class="icon">
+				<img src="extension_bar_logo.png" class="logo" />
+			</div>
+			<div class="notice">
+				Want to see better price while shopping online? Try our
+				<span id="browser-name">Safari</span>
+				<span> extension.</span>
+			</div>
+			<div id="extensions-btns" class="buttons">
+				<a name="go" class="button button-rounded button-highlight" href="http://www.pricebeater.ca/safari">Go</a>
+				<a name="later" class="button button-rounded hide_ext" href="javascript:void(0)">Later</a>
+				<a name="donask" class="button button-rounded hide_ext" href="javascript:void(0)">Don't ask me agin</a>
+			</div>	
+	  </div>
+	</div>
+	<div class="header">
+		<div class="container">
+			<div class="pb">
+				<a href="/">
+					<img src="images/pb_logo_text_ca.png" class="pb_logo_text" />
+				</a>
+				<a href="/">
+					<img src="images/pb_logo_img.png" class="pb_logo_img" />
+				</a>
+				<div class="sns-icons">
+					<a target="_blank" href="https://www.facebook.com/PriceBeater" class="facebook"></a>
+					<a target="_blank" href="https://twitter.com/PriceBeaterCA" class="twitter"></a>
+					<a target="_blank" href="http://www.tumblr.com/blog/pricebeater" class="tumblr"></a>
+				</div>
+			</div>
+		</div>
+			<div class="user">
+				<a href="javascript:void(0);">
+					<div class="avtar">
+						<img src="https://pbs.twimg.com/profile_images/378800000850759184/344d06650666f607bd3c396a60322a32.jpeg" />
+					</div>
+					<div class="user">
+						<div class="username">zhangwb</div>
+					</div>
+					<div class="wish"></div>
+					<div class="arrow"></div>
+				</div>
+			
+			</a>
+				
+			
+		</div>
+		<div class="search containers">
+			<div class="input-group search-box">
+				<input type="text" class="form-control ng-pristine ng-valid" ng-model="url" placeholder="Enter gadget name or paste product link url here...">
+				<span class="input-group-btn">
+					<button class="btn btn-search" type="button"></button>
+				</span>
+			</div>
+			
+			<!--<div class="input-group input-group-lg">
+				<input type="text" placeholder="Enter url here..." class="form-control" />
+				<span class="input-group-btn">
+					<button type="button" class="btn-search"></button>
+				</span>
+			</div>-->
+		</div>
+	</div>
+	<div class="container" style="padding-right: 120px; padding-left: 120px;" >
+		<ol class="breadcrumb">
+			<li>
+				<a href="/account/favorites/">My account</a>
+			</li>
+			<li style="background-position: 75px;" class="active version_beta">Setting
+			</li>
+		</ol>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<ul id="myTab" class="nav nav-tabs">
+					<li>
+						<a href="javascript:void(0)" data-toggle="tab">Edit profile</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" data-toggle="tab">Change password</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" data-toggle="tab">Alert settings</a>
+					</li>	
+				</ul>
+				<div class="tab-content">
+					<div id="profile" class="tab-pane active">
+						<table width="100%">
+							<tbody>
+								<tr>
+									<td class="input_label">Profile Picture</td>
+									<td char="input_body">
+										<img src="https://pbs.twimg.com/profile_images/378800000850759184/344d06650666f607bd3c396a60322a32.jpeg" style="weight:76px;height:76px;" class="img-rounded">
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<hr />
+									</td>
+								</tr>
+								<tr>
+									<td class="input_label">Username</td>
+									<td class="input_body">
+										<input type="text" name="username" value="zhangwb" class="form-control" />
+									</td>
+									<td class="input_notice"></td>
+								</tr>
+								<tr>
+									<td class="input_label">Email</td>
+									<td class="input_body">
+										<input type="text" name="email" value class="form-control" />
+									</td>
+									<td class="input_notice">
+										<span class="font_red">*</span>
+                    <span> Email will not be publicly displayed</span>
+                   </td>
+								</tr>
+								<tr>
+									<td class="input_label">Loction</td>
+									<td class="input_body">
+										<button class="location_btn">Current location</button>
+										<span style="margin-left: 20px; margin-right: 20px; margin-top: -30px; display: inline;">or</span>
+										<!--<select name="location" style="display: none;" value="" class="form-control"></select>-->
+										<input type="text" name="zip" style="width:112px;" placeholder="Poster Code" value="" class="form-control">
+									</td>
+									<td class="input_notice">
+										<span>
+											<span class="font_red">*</span>
+										  <span> The first 3 digtal of your poster code.</span>
+										  <br />
+										  <a id="tips" href="javascript:void(0)" rel="popover" data-content="We need the first 3 digits of your postal code in order to calculate the shipping cost to your address." class="underline" data-original-title="">Why do we need this?</a>
+										 </span>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<hr />
+									</td>
+								</tr>
+								<tr></tr>
+								<tr></tr>
+								<tr></tr>
+								<tr></tr>
+							</tbody>
+						</table>
+			    </div>
+		    </div>
+		  </div>
+		 </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="footer">
+		<div class="container">
+				<div class="copy_right">Copyright © 2013-2014, Push Button Information LTD. All rights reserved</div>
+				<div class="about">
+				<a href="http://">About Us</a>
+				&nbsp;|&nbsp;
+				<a href="http://">Contact</a>
+				&nbsp;|&nbsp;
+				<a href="http://">Terms of Use</a>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
